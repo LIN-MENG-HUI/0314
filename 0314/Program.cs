@@ -47,6 +47,31 @@ namespace _0314
             //        Console.WriteLine(i + "*" + j + "=" +i*j);
             //    }
             //}
+            string[] student = new string[5] { "Jack", "Mary", "Tom", "Grace", "Alice" };
+            string[] suject = new string[3] { "電腦概論", "程式設計", "動畫設計" };
+            int[] computer = { 80, 65, 100, 98, 83 };
+            int[] program = { 75, 67, 93, 25, 82 };
+            int[] animation = { 60, 62, 91, 50, 87 };
+            int[] studentNo = { 1, 2, 3, 4, 5 };
+            while (true)
+            {
+                Console.WriteLine("請輸入座號:");
+                var input = Console.ReadLine();
+                int intputstudentNo = int.Parse(input);
+                int arrayIndex = Array.IndexOf(studentNo, intputstudentNo);
+                if(arrayIndex>-1)
+                {
+                    Console.WriteLine("姓名" + student[arrayIndex]);
+                    Console.WriteLine("電腦概論" + computer[arrayIndex]);
+                    Console.WriteLine("程式設計" + program[arrayIndex]);
+                    Console.WriteLine("動畫設計" + animation[arrayIndex]);
+
+                }
+                else
+                {
+                    Console.WriteLine("沒有這個座號");
+                }
+            }
         }
        
 
